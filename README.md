@@ -1,6 +1,7 @@
 # react-d3-components
 
 > D3 Components for React
+This is a forked version of codesuki's repo tweaked for personal usage.
 
 Let React have complete control over the DOM even when using D3. This way we can benefit from Reacts Virtual DOM.
 
