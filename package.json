@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/codesuki/react-d3-components.git"
+    "url": "https://github.com/absk1317/react-d3-components.git"
   },
   "keywords": [
     "d3",
@@ -15,12 +15,12 @@
     "chart",
     "react-component"
   ],
-  "author": "Neri Marschik <marschik_neri@cyberagent.co.jp> (http://www.cyberagent.co.jp)",
+  "author": "Abhishek Verma <absk1317@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/codesuki/react-d3-components/issues"
+    "url": "https://github.com/absk1317/react-d3-components.git"
   },
-  "homepage": "https://github.com/codesuki/react-d3-components",
+  "homepage": "https://github.com/absk1317/react-d3-components.git",
   "peerDependencies": {
     "react": "^0.14.0 || ^15.0.0 || ^16.0.0",
     "react-dom": "^0.14.0 || ^15.0.0 || ^16.0.0"
