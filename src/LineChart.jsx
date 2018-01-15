@@ -283,6 +283,11 @@ const LineChart = createReactClass({
                 />
             ;
         }
+        const linePoints = function (data) {
+            console.log(data);
+            const symbol = customPointShapes[data.label];
+            d3.svg.symbol().type(symbol)();
+        };
         if (showCustomLine) {
             const translatePoints = function (point) {
                 return `translate(${xScale(x(point))}, ${yScale(y(point))})`;
@@ -301,12 +306,6 @@ const LineChart = createReactClass({
                 )
             );
         }
-
-        const linePoints = function (data) {
-            console.log(data);
-            const symbol = customPointShapes[data.label];
-            d3.svg.symbol().type(symbol)();
-        };
 
         return (
             <div>
