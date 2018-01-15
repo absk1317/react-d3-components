@@ -296,7 +296,7 @@ const LineChart = createReactClass({
                         className={lineStructureClassName}
                         d={d3.svg.symbol().type(customPointShape)()}
                         transform={translatePoints(p)}
-                        fill={shapeColor}
+                        fill={colorScale(label(p))}
                         onMouseEnter={evt => this.onMouseEnter(evt, data)}
                         onMouseLeave={evt => this.onMouseLeave(evt)}
                     />
