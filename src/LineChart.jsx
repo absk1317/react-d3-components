@@ -285,8 +285,7 @@ const LineChart = createReactClass({
         }
         const linePoints = function (data) {
             const symbol = customPointShapes[data.label];
-            console.log(symbol);
-            d3.svg.symbol().type(symbol)();
+            return d3.svg.symbol().type(symbol)();
         };
         if (showCustomLine) {
             const translatePoints = function (point) {
