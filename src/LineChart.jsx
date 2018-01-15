@@ -287,7 +287,7 @@ const LineChart = createReactClass({
             const translatePoints = function (point) {
                 return `translate(${xScale(x(point))}, ${yScale(y(point))})`;
             };
-
+            console.log(data)
             points = data.map((d, dataIndex) =>
                 d.values.map((p, i) =>
                     <path
