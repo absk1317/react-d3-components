@@ -284,15 +284,15 @@ const LineChart = createReactClass({
             ;
         }
         const linePoints = function (data) {
-            console.log(data);
             const symbol = customPointShapes[data.label];
+            console.log(symbol);
             d3.svg.symbol().type(symbol)();
         };
         if (showCustomLine) {
             const translatePoints = function (point) {
                 return `translate(${xScale(x(point))}, ${yScale(y(point))})`;
             };
-            points = data.map((d, dataIndex) =>
+            points = data.map(d =>
                 d.values.map((p, i) =>
                     <path
                         key={i}
