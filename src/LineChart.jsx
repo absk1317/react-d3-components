@@ -287,13 +287,12 @@ const LineChart = createReactClass({
             const translatePoints = function (point) {
                 return `translate(${xScale(x(point))}, ${yScale(y(point))})`;
             };
-            console.log(data)
             points = data.map((d, dataIndex) =>
                 d.values.map((p, i) =>
                     <path
                         key={i}
                         className={lineStructureClassName}
-                        d={d3.svg.symbol().type(customPointShapes[dataIndex])()}
+                        d={linePoints(d)}
                         transform={translatePoints(p)}
                         fill={colorScale(label(d))}
                         onMouseEnter={evt => this.onMouseEnter(evt, data)}
@@ -302,6 +301,12 @@ const LineChart = createReactClass({
                 )
             );
         }
+
+        const linePoints = function (data) {
+            console.log(data);
+            const symbol = customPointShapes[data.label];
+            d3.svg.symbol().type(symbol)();
+        };
 
         return (
             <div>
