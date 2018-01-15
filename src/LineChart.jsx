@@ -243,8 +243,7 @@ const LineChart = createReactClass({
             shapeColor,
             showCustomLine,
             lineStructureClassName,
-            customPointColor,
-            customPointShape
+            customPointShapes
         } = this.props;
 
         const data = this._data;
@@ -289,12 +288,12 @@ const LineChart = createReactClass({
                 return `translate(${xScale(x(point))}, ${yScale(y(point))})`;
             };
 
-            points = data.map(d =>
+            points = data.map((d, dataIndex) =>
                 d.values.map((p, i) =>
                     <path
                         key={i}
                         className={lineStructureClassName}
-                        d={d3.svg.symbol().type(customPointShape)()}
+                        d={d3.svg.symbol().type(customPointShapes[dataIndex])()}
                         transform={translatePoints(p)}
                         fill={colorScale(label(d))}
                         onMouseEnter={evt => this.onMouseEnter(evt, data)}
